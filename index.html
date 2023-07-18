@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robo</title>
+    <style>
+        body {
+    margin: 0;
+    background-color: bisque;
+    
+  } 
+
+h1 {
+    text-align: center;
+    font-family:'Times New Roman', Times, serif;
+}  
+
+.head{
+    background-color: rgb(222, 144, 76);
+    border-color: black;
+    border-style: solid;
+}
+.head {
+  width: 200px;
+  margin: 0 auto;
+  height: 100px;
+  border-radius: 100px 100px 50px 50px;
+  margin-bottom: 10px;
+}
+.robo:hover .head {
+  animation: head 5s;
+}
+@keyframes head {
+  0% {
+    width: 200px;
+  }
+  25% {
+    width: 200px;
+  }
+  50% {
+    width: 250px;
+  }
+
+}
+
+.mouth {
+  position: relative;
+}
+.mouth{
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  color: black;
+}
+
+
+.eyes {
+  position: relative;
+  top: 50px;
+}
+
+.eye1{
+width: 20px;
+height: 20px;
+border-radius: 15px;
+background-image: linear-gradient(
+   red,
+   black,
+   orange
+  );
+display: inline-block;
+}
+.eye1{
+margin-left: 30px;
+}
+
+.eye2{
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  background-image: linear-gradient(
+   red,
+   black,
+   orange
+  );
+  display: inline-block;
+}
+.eye2{
+  margin-left: 100px;
+}
+
+
+
+.body1{
+  width: 300px;
+  height: 150px;
+  margin: 0 auto;
+  display: flex;
+}
+.arm1{
+  background-color: rgb(0, 0, 0);
+  border-color: white;
+
+  border-style: solid;
+}
+.arm1{
+  width: 40px;
+  height: 125px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+.arm1{
+  margin-right: 10px;
+}
+.robo:hover .arm1 {
+  animation: arm1 2s infinite;
+}
+@keyframes arm1 {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+  25% {
+    transform: rotate(90deg);
+    transform-origin: top center;
+  }
+  50% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+}
+
+.arm2{
+  margin-left: 10px;
+}
+.robo:hover .arm2 {
+  animation: arm2 2s infinite;
+}
+.arm2{
+  background-color: rgb(0, 0, 0);
+  border-color: white;
+  border-style: solid;
+}
+.arm2{
+  width: 40px;
+  height: 125px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+@keyframes arm2 {
+  0% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+  25% {
+    transform: rotate(-90deg);
+    transform-origin: top center;
+  }
+  50% {
+    transform: rotate(0deg);
+    transform-origin: top center;
+  }
+}
+
+
+.stom{
+  background-color: silver;
+  background-image: linear-gradient(
+    360deg,
+    black 25%,
+    red 25%,
+    white 25%,
+    orange 25%
+   );
+}
+.stom{
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  transition: border-radius 1s;
+}
+.robo:hover .stom {
+  border-radius: 40%;
+  animation: stomach 2s infinite;
+}
+
+
+.body2 {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+
+}
+
+
+.leg1{
+    background-color: rgb(0, 0, 0);
+    border-color:white ;
+    border-style: solid;
+}
+.leg1 {
+  margin-left: 45px;
+}
+.robo:hover .leg1 {
+  animation: leg1 2s infinite;
+}
+.leg1{
+  width: 40px;
+  height: 120px;
+  border-radius: 50%;
+  display: inline-block;
+}
+@keyframes leg1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+}
+
+
+.leg2 {
+    margin-left: 30px;
+}
+.leg2 {
+  background-color: rgb(0, 0, 0);
+  border-color:white ;
+  border-style: solid;
+}
+.leg2 {
+  width: 40px;
+  height: 120px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.robo:hover .leg2 {
+    animation: leg2 2s infinite;
+} 
+@keyframes leg2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+}
+    </style>
+</head>
+<body >
+  <div class="robo">
+    <div>
+      <div class="head">
+        <div class="eyes">
+          <div class="eye1"></div>
+          <div class="eye2"></div>
+          <div class="mouth"></div>
+        </div>
+      </div>
+      <div class="body1">
+        <div class="arm1"></div>
+        <div class="stom"></div>
+        <div class="arm2"></div>
+      </div>
+      <div class="body2">
+        <div class="leg1"></div>
+        <div class="leg2"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
